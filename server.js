@@ -1,8 +1,8 @@
 'use strict';
 
-var express = require('express');
-var mongo = require('mongodb');
-var mongoose = require('mongoose');
+const express = require('express');
+const mongo = require('mongodb');
+const mongoose = require('mongoose');
 
 var cors = require('cors');
 
@@ -31,6 +31,15 @@ app.get("/api/hello", function (req, res) {
   res.json({greeting: 'hello API'});
 });
 
+app.post("/api/shorturl/new", (req, res) => {
+  let data = ""
+  req.on('data', (chunk) => {
+    data += chunk
+  })
+  req.on('end', () => {
+    console.log(data)
+  })
+})
 
 app.listen(PORT, function () {
   console.log(`Node.js listening on port ${PORT}...`);
