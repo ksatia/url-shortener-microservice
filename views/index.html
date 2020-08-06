@@ -24,7 +24,7 @@
         <p>
           example: <code>POST [project_url]/api/shorturl/new</code> - <code>https://www.google.com</code>
         </p>
-        <form action="/api/shorturl/new" method="POST" enctype="text/plain">
+        <form action="/api/shorturl/new" method="POST" enctype="application/x-www-form-urlencoded">
           <label for="url_input">URL to be shortened</label>
           <input id="url_input" type="url" name="longURL" value="https://www.google.com">
           <input type="submit" value="POST URL">
