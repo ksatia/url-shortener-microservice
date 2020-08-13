@@ -20,3 +20,10 @@ POST [project_url]/api/shorturl/new - body (urlencoded) :  url=https://www.googl
 https://www.google.com
 
 This URL shortener is backed by MongoDB hosted on Atlas. If you clone and run this project locally, you can either set up your own DB connection or just set your MongoDB driver code as an environment variable.
+
+NEXT STEPS
+
+1. Consider a cache layer
+2. Allow for custom short links
+3. Add link expiration
+4. Deeper handling of URLs (query parameters, etc)
